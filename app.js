@@ -17,6 +17,7 @@ next_btn.addEventListener("click", () => {
     if (billAmount > 0) {
         next_btn.style.display = "none"
         return_table.style.display = "block";
+        error_text.style.display = "none";
     }
     else {
         showError("Invalid bill amount");
