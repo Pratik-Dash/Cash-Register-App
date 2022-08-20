@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cash Register Manager</title>
     <link rel="stylesheet" href="./styles.css">
+
 </head>
+
 <body>
     <header class="header">
-    <h1>Cash Register Manager</h1>
+        <h1>Cash Register Manager</h1>
     </header>
-    <div class="description"><h3>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</h3></div>
-    
-    <div class="container">
-        <div class="input-container">
-        <label for="bill-amt">Bill Amount:</label>
-        <input type="number" id="bill-amt" class="input">
-        </div>
-        <div class="input-container">
-            <label for="cash-given">Cash Given:</label>
-            <input type="number" id="cash-given"class="input">
-        </div>
-       <div class="btn-container">
-        <button class="check-btn">Check</button>
-       </div>
-       <div class="table-container">
-        <table>
-            <tr>
-              <th>No. of notes</th> 
-                <td id="note1" class="noofnotes"></td>
-                <td id="note2" class="noofnotes"></td>
-                <td id="note3" class="noofnotes"></td>
-                <td id="note4" class="noofnotes"></td>
-                <td id="note5" class="noofnotes"></td>
-                <td id="note6" class="noofnotes"></td>
-            
-            </tr>
-            <tr>
-               <th>Availabe Notes</th>
-                <td id="2000note"class="note">2000</td>
-                <td id="500note" class="note">500</td>
-                <td id="100note" class="note">100</td>
-                <td id="20note" class="note">20</td>
-                <td id="5note" class="note">5</td>
-                <td id="1note" class="note">1</td>
-            </tr>
-        </table>
+    <div class="description">
+        <h3>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</h3>
     </div>
 
-    </div>
-    <footer>
-        <div>
-           <center><p>Made by Pratik Dash</p></center> 
+    <div class="container">
+        <div class="input-container">
+            <label for="bill-amt">Bill Amount:</label>
+            <input type="number" id="bill-amt" class="input">
         </div>
-    </footer>
-    
+        <div class="btn-container" id="next-btn">
+            <button class="next-btn">Next</button>
+        </div>
+        <div class="element-group">
+            <div class="input-container">
+                <label for="cash-given">Cash Given:</label>
+                <input type="number" id="cash-given" class="input">
+            </div>
+
+            <div class="btn-container">
+                <button class="check-btn">Check</button>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+                    <caption class="return-amt-table">Return Change</caption>
+
+                    <tr>
+                        <th>No. of notes</th>
+                        <td id="note1" class="noofnotes"></td>
+                        <td id="note2" class="noofnotes"></td>
+                        <td id="note3" class="noofnotes"></td>
+                        <td id="note4" class="noofnotes"></td>
+                        <td id="note5" class="noofnotes"></td>
+                        <td id="note6" class="noofnotes"></td>
+                    </tr>
+                    <tr>
+                        <th>Availabe Notes</th>
+                        <td id="2000note" class="note">2000</td>
+                        <td id="500note" class="note">500</td>
+                        <td id="100note" class="note">100</td>
+                        <td id="20note" class="note">20</td>
+                        <td id="5note" class="note">5</td>
+                        <td id="1note" class="note">1</td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+        <p class="error-text">Not enough cash</p>
+        <footer>
+            <div class="footer-container">
+                <center>
+                    <p>Made by Pratik Dash</p>
+                </center>
+            </div>
+            <script src="./app.js"></script>
+        </footer>
+
 </body>
+
 </html>

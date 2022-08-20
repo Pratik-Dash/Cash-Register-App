@@ -1,104 +1,181 @@
-body{
-    margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
+
+:root {
+    --primary: #7f1ab9;
+    --text: white;
+    --footer: rgb(28, 12, 70);
 }
-.header{
-    background-color: rgb(105, 33, 67);
-    color: white;
+
+body {
+    margin: 0px;
+    font-family: 'Federo', sans-serif;
+}
+
+.header {
+    background-color: var(--primary);
+    color: var(--text);
     text-align: center;
     padding: 1rem;
     border-bottom-left-radius: 1rem;
+    font-size: larger;
 
 }
-.description{
+
+.description {
     width: 80%;
     text-align: center;
     padding: 1rem;
-    margin : 1rem auto;
+    margin: 1rem auto;
+    font-size: large;
 }
-.container
-{
+
+.container {
     display: block;
     margin: 1rem auto;
     padding: 1rem;
     text-align: center;
 
 }
-.input-container{
-  
+
+.input-container {
+
     margin: 0 auto;
     text-align: center;
     padding: 1rem;
 }
-label{
+
+label {
     font-size: large;
     font-weight: bold;
 }
-.input{
+
+.input {
+
+    -moz-appearance: textfield;
     margin: 1rem;
     height: 2.5rem;
-    width: 40%;
+    width: 30%;
     border: 3px solid grey;
-    border-radius:1rem;
+    border-radius: 1rem;
     font-size: large;
     text-align: center;
 }
-.input:hover{
 
-    border-color: rgb(105, 33, 67);
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+
+    -webkit-appearance: none;
+
+}
+
+.input:hover {
+
+    border-color: var(--primary);
     transition: 1s;
 }
-.btn-container{
-    text-align: center;
+
+caption {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: larger;
+    margin: 1rem;
 }
-.check-btn{
-    
+
+.error-text {
+    font-size: large;
+    font-weight: 800;
+    color: red;
+}
+
+.btn-container {
+    text-align: center;
+
+}
+
+.check-btn {
+
     height: 50px;
     width: 150px;
-    color: rgb(105, 33, 67);
+    color: var(--primary);
     font-size: large;
     border-radius: 2rem;
-    border-color: rgb(105, 33, 67);
+    font-family: 'Federo', sans-serif;
+    border-color: var(--primary)
 }
-.check-btn:hover{
+
+.check-btn:hover {
     color: white;
-    background-color: rgb(105, 33, 67);
+    background-color: var(--primary);
     transition: 0.5s;
+    cursor: pointer;
 }
-.check-btn:focus{
+
+.next-btn {
+    height: 50px;
+    width: 150px;
+    color: var(--primary);
+    font-size: large;
+    border-radius: 2rem;
+    font-family: 'Federo', sans-serif;
+    border-color: var(--primary)
+}
+
+.next-btn:hover {
     color: white;
-    background-color: rgb(105, 33, 67);
+    background-color: var(--primary);
+    transition: 0.5s;
+    cursor: pointer;
 }
-.table-container{
-    
+
+.check-btn:focus {
+    color: white;
+    background-color: var(--primary);
+}
+
+.table-container {
+
     margin: 0 auto;
-    
+
 }
-table{
-    
-    margin:2rem auto;
-    padding: 1rem;
+
+table {
+
+    margin: 2rem auto;
+
     border-collapse: collapse;
-   
+    align-items: center;
+
 }
-table tr{
-    border-bottom: 2px solid;
-    
-    
-}
-table tr td{
-    padding: 2rem;
-    border: 1px solid black;
-    width: 12%;
+
+table tr {}
+
+table tr td {
+    padding: 1rem;
+    border: 1px solid var(--primary);
+    width: 14%;
+    height: 30px;
     font-weight: 700;
     font-size: large;
+
+
+}
+
+table tr th {
+    background-color: var(--primary);
+    color: var(--text);
+    height: 20%;
+}
+
+.note {
+    background-color: var(--primary);
+    color: var(--text);
+    border-right: 1px solid var(--text);
+}
+
+footer p {
+    color: var(--text);
+    background-color: var(--primary);
+    padding: 2rem;
     
-}
-table tr th{
-    background-color: rgb(105, 33, 67);
-    color: white;
-}
-.note{
-    background-color: rgb(105, 33, 67);
-    color: white;
-   
+
 }
