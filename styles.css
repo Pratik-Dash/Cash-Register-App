@@ -1,0 +1,104 @@
+body{
+    margin: 0px;
+}
+.header{
+    background-color: rgb(105, 33, 67);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+
+}
+.description{
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+    margin : 1rem auto;
+}
+.container
+{
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+
+}
+.input-container{
+  
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+}
+label{
+    font-size: large;
+    font-weight: bold;
+}
+.input{
+    margin: 1rem;
+    height: 2.5rem;
+    width: 40%;
+    border: 3px solid grey;
+    border-radius:1rem;
+    font-size: large;
+    text-align: center;
+}
+.input:hover{
+
+    border-color: rgb(105, 33, 67);
+    transition: 1s;
+}
+.btn-container{
+    text-align: center;
+}
+.check-btn{
+    
+    height: 50px;
+    width: 150px;
+    color: rgb(105, 33, 67);
+    font-size: large;
+    border-radius: 2rem;
+    border-color: rgb(105, 33, 67);
+}
+.check-btn:hover{
+    color: white;
+    background-color: rgb(105, 33, 67);
+    transition: 0.5s;
+}
+.check-btn:focus{
+    color: white;
+    background-color: rgb(105, 33, 67);
+}
+.table-container{
+    
+    margin: 0 auto;
+    
+}
+table{
+    
+    margin:2rem auto;
+    padding: 1rem;
+    border-collapse: collapse;
+   
+}
+table tr{
+    border-bottom: 2px solid;
+    
+    
+}
+table tr td{
+    padding: 2rem;
+    border: 1px solid black;
+    width: 12%;
+    font-weight: 700;
+    font-size: large;
+    
+}
+table tr th{
+    background-color: rgb(105, 33, 67);
+    color: white;
+}
+.note{
+    background-color: rgb(105, 33, 67);
+    color: white;
+   
+}
