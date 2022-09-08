@@ -20,7 +20,7 @@ next_btn.addEventListener("click", () => {
         error_text.style.display = "none";
     }
     else {
-        showError("Invalid bill amount");
+        showError("Bill amount cannot be zero or negative.");
     }
 
 })
@@ -43,6 +43,7 @@ checkBtn.addEventListener("click", function validateAmounts() {
 function showError(message) {
     error_text.innerText = message;
     error_text.style.display = "block";
+    error_text.style.className = "Error"
 }
 function calculateNotes(changeAmount) {
 

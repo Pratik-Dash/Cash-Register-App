@@ -87,6 +87,8 @@ caption {
     font-size: large;
     font-weight: 800;
     color: red;
+    text-align: center;
+    padding: 1rem;
 }
 
 .btn-container {
@@ -170,7 +172,16 @@ table tr th {
     padding: 1rem;
     border-right: 1px solid white;
 }
+.credit{
+    text-decoration: none;
+    
+}
+.credit:hover{
 
+    color: rgb(216, 29, 216);
+    border-bottom: 1px solid var(--primary);
+    transition: .5s;
+}
 
 
 footer p {
@@ -181,4 +192,20 @@ footer p {
     font-weight: bold;
     
 
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+.footer-links li{
+    margin: 1rem;
+}
+.footer-links li a{
+    color: grey;
+    cursor: pointer;
+}
+.footer-links li a:hover{
+    color: var(--primary);
 }
