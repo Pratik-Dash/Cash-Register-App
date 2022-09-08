@@ -1,14 +1,14 @@
 const billAmt = document.querySelector('#bill-amt');
 const cashPaid = document.querySelector("#cash-given");
 const checkBtn = document.querySelector(".check-btn");
-const error_text = document.querySelector(".error-text");
+const output_text = document.querySelector(".output-text");
 const table_definition = document.querySelectorAll(".noofnotes")
 const returnAmt = document.querySelector(".return-amt-table")
 const return_table = document.querySelector(".element-group")
 const next_btn = document.querySelector(".next-btn");
 var billAmount = 0;
 var cashGiven = 0;
-error_text.style.display = "none";
+output_text.style.display = "none";
 return_table.style.display = "none";
 next_btn.addEventListener("click", () => {
 
@@ -17,34 +17,59 @@ next_btn.addEventListener("click", () => {
     if (billAmount > 0) {
         next_btn.style.display = "none"
         return_table.style.display = "block";
-        error_text.style.display = "none";
+        output_text.style.display = "none";
     }
     else {
-        showError("Bill amount cannot be zero or negative.");
+        showOutput("Bill amount cannot be zero or negative.","error");
     }
 
 })
-checkBtn.addEventListener("click", function validateAmounts() {
-    error_text.style.display = "none";
-    cashGiven = Number(cashPaid.value);
-    if (billAmount < cashGiven) {
-        error_text.style.display = "none";
-        var changeAmount = cashGiven - billAmount;
+checkBtn.addEventListener("click", () => {
+cashGiven = Number(cashPaid.value);
+billAmount = Number(billAmt.value);
+if(billAmount> 0 && cashGiven >0){
+
+    if(billAmount<cashGiven){
+        output_text.style.display = "none";
+        var changeAmount = (cashGiven - billAmount);
         returnAmt.innerText = "Return Change - " + changeAmount;
         calculateNotes(changeAmount);
+        
+
     }
-    else {
-        console.log(billAmount)
-        console.log(cashGiven)
-        showError("Not enough cash, we have some chores for you if you are interested.");
+    else if(billAmount == cashGiven){
+
+        showOutput("Amount has been paid.","success");
+        returnAmt.innerText = "Return Change - 0";
     }
+    else{
+        showOutput("Low on cash? We have some chores for you if you are interested.","error");
+    }
+}
+else{
+
+    showOutput("Bill amount and Cash amount cannot be zero or negative.","error");
+}
+
 })
 
-function showError(message) {
-    error_text.innerText = message;
-    error_text.style.display = "block";
-    error_text.style.className = "Error"
+function showOutput(message,status) {
+    output_text.innerText = message;
+    output_text.style.display = "block";
+    if(status === "error"){
+
+        
+        output_text.style.color = "red"
+       
+    }
+    else{
+        output_text.style.color = "green"
+        
+       
+        
+    }
 }
+
 function calculateNotes(changeAmount) {
 
     var remainingNotes = 0;

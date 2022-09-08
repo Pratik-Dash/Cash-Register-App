@@ -83,7 +83,7 @@ caption {
     margin: 1rem;
 }
 
-.error-text {
+.output-text {
     font-size: large;
     font-weight: 800;
     color: red;
@@ -92,7 +92,8 @@ caption {
 }
 
 .btn-container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 
 }
 
