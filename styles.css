@@ -10,6 +10,7 @@ body {
     margin: 0px;
     font-family: 'Federo', sans-serif;
     width: 100%;
+  
 
 }
 
@@ -56,7 +57,7 @@ label {
     -moz-appearance: textfield;
     margin: 1rem;
     height: 2.5rem;
-    width: 30%;
+    width: 300px;
     border: 3px solid grey;
     border-radius: 1rem;
     font-size: large;
@@ -147,37 +148,43 @@ caption {
 
 table {
 
-    margin: 3rem auto;
     border-collapse: collapse;
-
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
 
+tbody {
+    padding: 1.5rem;
 
+}
 
 table tr td {
     padding: 1rem;
-    border: 1px solid var(--primary);
-    width: 15%;
-    height: 30px;
-    font-weight: 700;
-    font-size: large;
-
-
+    border: 2px solid var(--primary);
+    width: 40px;
+    text-align: center;
+    font-weight: 900;
+   
+   
 }
 
 table tr th {
-    background-color: var(--primary);
-    color: var(--text);
-    padding: 1rem;
-    border-right: 1px solid white;
+    /* background-color: var(--primary); */
+    color: var(--primary);
+    padding: .5rem;
+    border: 2px solid var(--primary);
 }
-.credit{
+
+
+.credit {
     text-decoration: none;
-    
+
 }
-.credit:hover{
+
+.credit:hover {
 
     color: rgb(216, 29, 216);
     border-bottom: 1px solid var(--primary);
@@ -186,27 +193,31 @@ table tr th {
 
 
 footer p {
-   border-top: 1px solid var(--primary);
+    border-top: 1px solid var(--primary);
     padding: 2rem;
-   
-    color:rgb(121, 121, 121);
+
+    color: rgb(121, 121, 121);
     font-weight: bold;
-    
+
 
 }
-.footer-links{
+
+.footer-links {
     display: flex;
     justify-content: center;
     list-style-type: none;
     padding-inline-start: 0px;
 }
-.footer-links li{
+
+.footer-links li {
     margin: 1rem;
 }
-.footer-links li a{
+
+.footer-links li a {
     color: grey;
     cursor: pointer;
 }
-.footer-links li a:hover{
+
+.footer-links li a:hover {
     color: var(--primary);
 }

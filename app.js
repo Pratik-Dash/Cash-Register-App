@@ -74,7 +74,7 @@ function calculateNotes(changeAmount) {
 
     var remainingNotes = 0;
     var noteCount = 0;
-    var notes = [2000, 500, 100, 20, 5, 1];
+    var notes = [2000, 500, 100, 20, 10, 5, 1];
     for (var i = 0; i < notes.length; i++) {
         noteCount = Math.trunc(changeAmount / notes[i]);
         changeAmount = changeAmount % notes[i];
